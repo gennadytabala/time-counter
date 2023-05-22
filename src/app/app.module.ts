@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PanelComponent } from './panel/panel.component';
 import { CounterComponent } from './counter/counter.component';
+import { PeriodPipe } from './period.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     PanelComponent,
-    CounterComponent
+    CounterComponent,
+    PeriodPipe
   ],
   imports: [
     BrowserModule
