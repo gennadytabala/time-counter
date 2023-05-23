@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'time-counter';
+  openSettings = false;
+
+  turnSettings() {
+    this.openSettings = !this.openSettings;
+  }
+
 }
