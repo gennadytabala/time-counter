@@ -9,9 +9,7 @@ export class TimingService {
   constructor() { }
 
   getTimer(): Observable<number> {
-
     return interval(1000);
-
   }
 
 }

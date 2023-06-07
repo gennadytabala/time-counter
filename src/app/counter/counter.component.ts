@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Counter } from '../counter';
 import { TimingService } from '../timing.service';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { DashboardService } from '../dashboard.service';
 @Component({
   selector: 'app-counter',
@@ -9,7 +8,6 @@ import { DashboardService } from '../dashboard.service';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-  //@Input() counter?: Counter;
 
   @Input() name?: string;
 

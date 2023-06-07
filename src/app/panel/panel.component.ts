@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Counter } from '../counter';
-import { Observable } from 'rxjs';
 import { DashboardService } from '../dashboard.service';
-
 
 @Component({
   selector: 'app-panel',

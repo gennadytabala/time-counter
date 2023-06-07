@@ -19,5 +19,4 @@ export class PeriodPipe implements PipeTransform {
     if (str.length === 1) return `0${str}`
     return str
   }
-
 }

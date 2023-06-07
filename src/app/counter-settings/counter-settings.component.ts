@@ -4,7 +4,7 @@ import { DashboardService } from '../dashboard.service';
 @Component({
   selector: 'app-counter-settings',
   templateUrl: './counter-settings.component.html',
-  styleUrls: ['./counter-settings.component.css'],
+  styleUrls: ['./counter-settings.component.css']
 })
 export class CounterSettingsComponent {
   @Input() name?: string;

@@ -9,16 +9,13 @@ export class DashboardService {
   counters: Counter[];
 
   constructor() {
-
     this.counters = [
       { name: 'work', period: 0 },
       { name: 'chill', period: 0 }
     ];
-
   }
 
   add(counter: Counter): void {
-
     const counterUpdated = this.counters.find(item => item.name == counter.name);
 
     if (counterUpdated) {
@@ -29,7 +26,6 @@ export class DashboardService {
   }
 
   get(): Observable<Counter[]> {
-    console.log(`get() ${this.counters}`);
     return of(this.counters);
   }
 
