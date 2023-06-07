@@ -1,6 +1,6 @@
 <p>dashboard works!</p>
 <ul>
-  <li *ngFor="let counter of counters | keyvalue">
-    {{counter.key}} {{counter.value | period}}
+  <li *ngFor="let counter of counters">
+    {{counter.name}} {{counter.period | period}}
   </li>
 </ul>

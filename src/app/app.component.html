@@ -3,7 +3,7 @@
   <button type="button" (click)="turnSettings()">+/x</button>
 </header>
 <div *ngIf="openSettings; else showApp">
-  settings here
+  <app-settings></app-settings>
 </div>
 <ng-template #showApp>
   <app-dashboard></app-dashboard>

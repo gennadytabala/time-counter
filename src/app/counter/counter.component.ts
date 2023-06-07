@@ -9,7 +9,12 @@ import { DashboardService } from '../dashboard.service';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-  @Input() counter?: Counter;
+  //@Input() counter?: Counter;
+
+  @Input() name?: string;
+
+  period: number = 0;
+
   timerStarted = false;
 
   timer$: Subscription | null = null;
@@ -28,8 +33,8 @@ export class CounterComponent {
 
   startTimer(): void {
     this.timer$ = this.timingService.getTimer().subscribe(n => {
-      if (this.counter) {
-        this.counter.period = n;
+      if (this.name) {
+        this.period = n + 1;
         this.timerStarted = true;
       }
     });
@@ -39,9 +44,9 @@ export class CounterComponent {
     this.timer$?.unsubscribe();
     this.timerStarted = false;
 
-    if (this.counter) {
-      this.dashboardService.add(this.counter);
-      this.counter.period = 0;
+    if (this.name) {
+      this.dashboardService.add({ name: this.name, period: this.period });
+      this.period = 0;
     }
   }
 

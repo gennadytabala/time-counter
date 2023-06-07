@@ -1,0 +1,6 @@
+<p>settings works!</p>
+<ul>
+  <li *ngFor="let counter of counters$ | async">
+    <app-counter-settings [name]="counter.name"></app-counter-settings>
+  </li>
+</ul>

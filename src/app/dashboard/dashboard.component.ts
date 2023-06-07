@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DashboardService } from '../dashboard.service';
 import { Observable } from 'rxjs';
-import { Counters } from '../counters';
+import { Counter } from '../counter';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +9,7 @@ import { Counters } from '../counters';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  counters: Counters = {};
+  counters: Counter[] = [];
   constructor(private dashboardService: DashboardService) { };
 
   ngOnInit() {

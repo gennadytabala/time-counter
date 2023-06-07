@@ -6,6 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PanelComponent } from './panel/panel.component';
 import { CounterComponent } from './counter/counter.component';
 import { PeriodPipe } from './period.pipe';
+import { SettingsComponent } from './settings/settings.component';
+import { CounterSettingsComponent } from './counter-settings/counter-settings.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,9 @@ import { PeriodPipe } from './period.pipe';
     PanelComponent,
     CounterComponent,
     PeriodPipe
+    ,
+    SettingsComponent,
+    CounterSettingsComponent
   ],
   imports: [
     BrowserModule

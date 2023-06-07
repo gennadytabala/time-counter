@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Counter } from '../counter';
+import { Observable } from 'rxjs';
+import { DashboardService } from '../dashboard.service';
 
 
 @Component({
@@ -8,11 +10,12 @@ import { Counter } from '../counter';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent {
-  counters: Counter[] = []
+  counters: Counter[] = [];
+
+  constructor(private dashboardService: DashboardService) { };
 
   ngOnInit() {
-    this.counters.push({ name: "work", period: 0 });
-    this.counters.push({ name: "chill", period: 0 });
+    this.dashboardService.get().subscribe(counters => this.counters = counters);
   }
 
 }
