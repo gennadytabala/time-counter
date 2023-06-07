@@ -4,3 +4,9 @@
     <app-counter-settings [name]="counter.name"></app-counter-settings>
   </li>
 </ul>
+<form (ngSubmit)="add(counterForm.value)" #counterForm="ngForm">
+  <div>
+    <input name="name" ngModel>
+  </div>
+  <button type="submit">Add</button>
+</form>

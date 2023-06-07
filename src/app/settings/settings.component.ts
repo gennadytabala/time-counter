@@ -13,9 +13,13 @@ export class SettingsComponent {
   counters$!: Observable<Counter[]>;
   constructor(private dashboardService: DashboardService) { }
 
+  add(counter: { name: string }) {
+    console.log(counter);
+    this.dashboardService.add({ name: counter.name, period: 0 });
+
+  }
+
   ngOnInit() {
     this.counters$ = this.dashboardService.get();
   }
-
-
 }
