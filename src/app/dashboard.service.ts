@@ -34,7 +34,7 @@ export class DashboardService {
   }
 
   delete(name: string): void {
-    const index = this.counters.findIndex(item => item.name !== name)
+    const index = this.counters.findIndex(item => item.name === name)
     if (index === -1) {
       return;
     }

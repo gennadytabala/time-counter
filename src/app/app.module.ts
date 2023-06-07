@@ -8,6 +8,7 @@ import { CounterComponent } from './counter/counter.component';
 import { PeriodPipe } from './period.pipe';
 import { SettingsComponent } from './settings/settings.component';
 import { CounterSettingsComponent } from './counter-settings/counter-settings.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,13 @@ import { CounterSettingsComponent } from './counter-settings/counter-settings.co
     DashboardComponent,
     PanelComponent,
     CounterComponent,
-    PeriodPipe
-    ,
+    PeriodPipe,
     SettingsComponent,
     CounterSettingsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

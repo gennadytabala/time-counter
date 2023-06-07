@@ -1,6 +1,4 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardService } from '../dashboard.service';
 
 @Component({
