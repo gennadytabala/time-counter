@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "time-counter-8f1a1"
+  },
+  "targets": {
+    "time-counter-8f1a1": {
+      "hosting": {
+        "time-counter": [
+          "time-counter-8f1a1"
+        ]
+      }
+    }
+  }
+}
